@@ -1,0 +1,141 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;  /* Centers the content horizontally */
+    align-items: center;      /* Centers the content vertically (optional) */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;  /* Centers the list items horizontally */
+    gap: 2rem;  /* Adds space between links */
+}
+
+.nav-links li {
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Responsive design (optional) */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;  /* Stacks links vertically on smaller screens */
+        gap: 1rem;
+    }
+}
+
+/* styles.css */
+
+/* General Section Styling */
+.section {
+    height: 50vh; /* Full viewport height for each section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow */
+    padding: 2rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+/* General Section Styling */
+
+.scroll-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    text-align: center;
+    max-width: 500px;
+}
+
+.scroll-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Skill List Styling */
+.skill-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-list li {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Bubble Animation on Hover */
+.skill-list li:hover {
+    animation: bubble 0.6s ease-in-out;
+    background: #f0f8ff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Bubble Animation Keyframes */
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 255, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
